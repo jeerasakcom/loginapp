@@ -1,0 +1,46 @@
+<div class="displayTable">
+  <div class="displayTableCell">
+
+    <div class="authBlock">
+      <h3>LogIn</h3>
+
+      <!-- form username&password -->>
+      <div class="formGroup">
+        <input type="text" class="fromControl" placeholder="Username" #userName required>
+      </div>
+
+      <div class="formGroup">
+        <input type="text" class="fromControl" placeholder="Password" #userPassword required>
+      </div>
+
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Or</span></span>
+      </div>
+
+
+      <!-- ติดต่อ API Auth-->
+      <div class="formGroup">
+        <input type="button" class="btn btnPrimary" value="Log in"
+          (click)="authService.SignIn(userName.value, userPassword.value)">
+      </div>
+
+
+      <div class="formGroup">
+        <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth">
+          <i class="fab fa-google-plus-g"></i>
+        </button>
+      </div>
+
+
+      <div class="forgotPassword">
+        <span routerLink="/forgot">ลืมรหัสผ่าน</span>
+      </div>
+
+      <div class="redirectToLogin">
+        <span>ลงทะเบียนสมาชิก<span class="redirect" routerLink="/reg">สมัครสมาชิก</span></span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
